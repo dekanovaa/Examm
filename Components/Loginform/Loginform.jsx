@@ -4,15 +4,17 @@ import './Loginform.css';
 
 const Loginform = () => {
   const [number, setNumber] = useState('991234567');
-  const [password, setPassword] = useState('advokat_admin');
-  
+  const [password, setPassword] = useState('advokat_admin');  
 
   const handleSubmit = (event) => {
     event.preventDefault();
-   setNumber = number;
-   setPassword = password;
-   const [token, setToken] = useState('');
+    console.log('number:', number);
+    console.log('password:', password);
+    localStorage.setItem('Number', number);
+    localStorage.setItem('password', password);
   };
+
+  
 
   return (
     <div className="loginform">
